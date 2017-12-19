@@ -1,0 +1,968 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+         <link rel="stylesheet" type="text/css" href="../dist/MyFontsWebfontsKit.css">
+        <link rel="stylesheet" href="artists.css" type="text/css">
+        <style>
+            h1{
+                font-size: 50px;
+                letter-spacing: 2px;
+            }
+            h2{
+                font-family: 'Pacifico', cursive;
+                letter-spacing: 2px;
+                padding: 0px;
+                font-size: 25px;
+                opacity: 0.75;
+            }
+            h3{
+                color:white;
+                font-size: 150%;
+            }
+            .slideshow-container {
+                  position: relative;
+         }
+
+            .prev, .next {
+              cursor: pointer;
+              position: absolute;
+              top: 50%;
+              width: auto;
+              padding: 16px;
+              margin-top: -22px;
+              color: white;
+              font-weight: bold;
+              font-size: 18px;
+              transition: 0.6s ease;
+              border-radius: 0 3px 3px 0;
+            }
+            .prev{
+                left: 30px;
+            }
+
+            .next {
+              right: 30px;
+              border-radius: 3px 0 0 3px;
+            }
+
+            .prev:hover, .next:hover {
+              background-color: rgba(0,0,0,0.8);
+            }
+
+            .text {
+              color: #f2f2f2;
+              font-size: 15px;
+              padding: 8px 12px;
+              position: absolute;
+              bottom: 8px;
+              width: 100%;
+              text-align: center;
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+              color: #f2f2f2;
+              font-size: 12px;
+              padding: 8px 12px;
+              position: absolute;
+              top: 0;
+            }
+
+            /* The dots/bullets/indicators */
+/*
+            .dot {
+              cursor:pointer;
+              height: 13px;
+              width: 13px;
+              margin: 0 px;
+              background-color: #bbb;
+              border-radius: 50%;
+              display: inline-block;
+              transition: background-color 0.6s ease;
+            }
+*/
+
+            .active, .dot:hover {
+              background-color: #717171;
+            }
+
+            .fade {
+              -webkit-animation-name: fade;
+              -webkit-animation-duration: 1.5s;
+              animation-name: fade;
+              animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+              from {opacity: .4} 
+              to {opacity: 1}
+            }
+
+            @keyframes fade {
+              from {opacity: .4} 
+              to {opacity: 1}
+            }
+            .mySlides{
+                display: none;
+                
+            }
+            .profile-content{
+                position: relative;
+                margin-left: 0px;
+                display: inline-block;
+                float:left;
+                
+            }
+            .profile-content {
+                color: black;
+                font-size: 20px;
+                letter-spacing: 1px;
+            }
+           
+            .row{
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        
+       <header>
+      <span id="menu"><i class="fa fa-bars"></i></span>
+             <center><h1 >ARTISTS</h1>
+        </center>
+      </header>
+        <br><br>
+        <div id="overlay">
+            <header>
+                <div id="cancel"><i class="fa fa-times"></i></div>
+            </header>
+            <center>
+                <nav>
+                    <ul class="panel">
+                        <li class="color-1"> <a href="../index.html">
+                                <div class="front">
+                                    <i class="fa fa-home fa-4x"></i>
+                                </div>
+                                <div class="back">
+                                    <span>home</span>
+                                </div>
+                            </a><br>
+                            <span class="text1"><em>Place to be</em></span>
+                        </li>
+                        <li class="color-2"> <a href="../Gallery/index.html">
+                                <div class="front">
+                                    <i class="fa fa-university fa-4x"></i>
+                                </div>
+                                <div class="back">
+                                    <span>galleries</span>
+                                </div>
+                            </a><br>
+                            <span class="text1"><em>Only the best</em></span>
+                        </li>
+                        <li class="color-3"> <a href="index.html">
+                                <div class="front">
+                                    <i class="fa fa-users fa-4x"></i>
+                                </div>
+                                <div class="back">
+                                    <span>artists</span>
+                                </div>
+                            </a><br>
+                            <span class="text1"><em>Legends</em></span>
+                        </li>
+                    </ul>
+                </nav>
+            </center>
+        </div>
+        
+        <div class="row">
+            <figure class="card col-md-4">
+                <img src="../images/pro1.jpg" alt="profile-sample1" class="background"/>
+                <img src="../images/artist1.jpg" alt="profile-sample1" class="profile" id="mybtn1"/>
+                <figcaption>
+                    <h3>Pablo Picasso</h3>
+                    <div class="icons"><a><i class="fa fa-facebook-official" aria-hidden="true"></i></a><i class="fa fa-instagram" aria-hidden="true"></i>
+<a>
+                        </a></div>
+                </figcaption>
+            </figure>
+            <figure class="card col-md-4">
+                <img src="../images/pro2.jpg" alt="profile-sample1" class="background"/>
+                <img src="../images/artist2.jpg" alt="profile-sample1" class="profile" id="mybtn2"/>
+                <figcaption>
+                    <h3>Billy Al Bengston</h3>
+                <div class="icons"><a><i class="fa fa-facebook-official" aria-hidden="true"></i></a><i class="fa fa-instagram" aria-hidden="true"></i>
+<a>
+                        </a></div>
+                </figcaption>
+            </figure>
+            <figure class="card col-md-4">
+                <img src="../images/pro3.jpg" alt="profile-sample1" class="background"/>
+                <img src="../images/artist3.jpg" alt="profile-sample1" class="profile" id="mybtn3"/>
+                <figcaption>
+                    <h3>Roberto Almagno</h3>
+                <div class="icons"><a><i class="fa fa-facebook-official" aria-hidden="true"></i></a><i class="fa fa-instagram" aria-hidden="true"></i>
+<a>
+                        </a></div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="row">
+            <figure class="card col-md-4">
+                <img src="../images/pro4.jpg" alt="profile-sample1" class="background"/>
+                <img src="../images/artist4.jpg" alt="profile-sample1" class="profile" id="mybtn4"/>
+                <figcaption>
+                    <h3>Dora Frost</h3>
+                <div class="icons"><a><i class="fa fa-facebook-official" aria-hidden="true"></i></a><i class="fa fa-instagram" aria-hidden="true"></i>
+<a>
+                        </a></div>
+                </figcaption>
+            </figure>
+            <figure class="card col-md-4">
+                <img src="../images/pro5.jpg" alt="profile-sample1" class="background"/>
+                <img src="../images/artist5.jpg" alt="profile-sample1" class="profile" id="mybtn5"/>
+                <figcaption>
+                    <h3>Marina Abramovic</h3>
+                <div class="icons"><a><i class="fa fa-facebook-official" aria-hidden="true"></i></a><i class="fa fa-instagram" aria-hidden="true"></i>
+<a>
+                        </a></div>
+                </figcaption>
+            </figure>
+            <figure class="card col-md-4">
+                <img src="../images/pro6.jpg" alt="profile-sample1" class="background"/>
+                <img src="../images/artist6.jpg" alt="profile-sample1" class="profile" id="mybtn6"/>
+                <figcaption>
+                    <h3>Cindy Sherman</h3>
+                <div class="icons"><a><i class="fa fa-facebook-official" aria-hidden="true"></i></a><i class="fa fa-instagram" aria-hidden="true"></i>
+<a>
+                        </a></div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="row">
+            <figure class="card col-md-4">
+                <img src="../images/pro7.jpg" alt="profile-sample1" class="background"/>
+                <img src="../images/artist7.jpg" alt="profile-sample1" class="profile" id="mybtn7"/>
+                <figcaption>
+                    <h3>Francesco Clemente</h3>
+                <div class="icons"><a><i class="fa fa-facebook-official" aria-hidden="true"></i></a><i class="fa fa-instagram" aria-hidden="true"></i>
+<a>
+                        </a></div>
+                </figcaption>
+            </figure>
+            <figure class="card col-md-4">
+                <img src="../images/pro8.jpg" alt="profile-sample1" class="background"/>
+                <img src="../images/artist8.jpg" alt="profile-sample1" class="profile" id="mybtn8"/>
+                <figcaption>
+                    <h3>Gino de Dominicis</h3>
+                <div class="icons"><a><i class="fa fa-facebook-official" aria-hidden="true"></i></a><i class="fa fa-instagram" aria-hidden="true"></i>
+<a>
+                        </a></div>
+                </figcaption>
+            </figure>
+            <figure class="card col-md-4">
+                <img src="../images/pro9.jpg" alt="profile-sample1" class="background"/>
+                <img src="../images/artist9.jpg" alt="profile-sample1" class="profile" id="mybtn9"/>
+                <figcaption>
+                    <h3>William Eggleston</h3>
+                <div class="icons"><a><i class="fa fa-facebook-official" aria-hidden="true"></i></a><i class="fa fa-instagram" aria-hidden="true"></i>
+<a>
+                        </a></div>
+                </figcaption>
+            </figure>
+        </div>
+        <div id="myModal1" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <center><h1>ABOUT THE ARTIST <span class="close">&times;</span></h1> </center>
+                  
+                </div>
+                <div class="modal-body row">
+                    <div class =" profile-content col-md-4">
+                            <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        <br>
+                        <strong>Awards</strong>
+                        <ol>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="slideshow-container col-md-8">
+                       
+                        <div class="mySlides ">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="../images/1.jpg" style="width:100%">
+                            <div class="text">
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="../images/3.jpg" style="width:100%">
+                            <div class="text">
+                             <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="../images/9.jpg" style="width:100%">
+                            <div class="text"> 
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p></div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div><br>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    
+                </div>
+                <br>
+            </div>
+        </div>
+        <div id="myModal2" class="modal">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <center><h1>ABOUT THE ARTIST <span class="close">&times;</span></h1> </center>
+                  
+                </div>
+                <div class="modal-body row">
+                    <div class =" profile-content col-md-4">
+                            <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        <br>
+                        <strong>Awards</strong>
+                        <ol>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="slideshow-container col-md-8">
+                       
+                        <div class="mySlides ">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="../images/2.jpg" style="width:100%">
+                            <div class="text">
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="../images/4.jpg" style="width:100%">
+                            <div class="text">
+                             <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="../images/6.jpg" style="width:100%">
+                            <div class="text"> 
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p></div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div><br>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    
+                </div>
+                <br>
+            </div>
+        </div>
+        <div id="myModal3" class="modal">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <center><h1>ABOUT THE ARTIST <span class="close">&times;</span></h1> </center>
+                  
+                </div>
+                <div class="modal-body row">
+                    <div class =" profile-content col-md-4">
+                            <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        <br>
+                        <strong>Awards</strong>
+                        <ol>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="slideshow-container col-md-8">
+                       
+                        <div class="mySlides ">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="../images/1.jpg" style="width:100%">
+                            <div class="text">
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="../images/4.jpg" style="width:100%">
+                            <div class="text">
+                             <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="../images/7.jpg" style="width:100%">
+                            <div class="text"> 
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p></div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div><br>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    
+                </div>
+                <br>
+            </div>
+        </div>
+        <div id="myModal4" class="modal">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <center><h1>ABOUT THE ARTIST <span class="close">&times;</span></h1> </center>
+                  
+                </div>
+                <div class="modal-body row">
+                    <div class =" profile-content col-md-4">
+                            <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        <br>
+                        <strong>Awards</strong>
+                        <ol>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="slideshow-container col-md-8">
+                       
+                        <div class="mySlides ">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="../images/2.jpg" style="width:100%">
+                            <div class="text">
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="../images/9.jpg" style="width:100%">
+                            <div class="text">
+                             <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="../images/8.jpg" style="width:100%">
+                            <div class="text"> 
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p></div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div><br>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    
+                </div>
+                <br>
+            </div>
+        </div>
+        <div id="myModal5" class="modal">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <center><h1>ABOUT THE ARTIST <span class="close">&times;</span></h1> </center>
+                  
+                </div>
+                <div class="modal-body row">
+                    <div class =" profile-content col-md-4">
+                            <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        <br>
+                        <strong>Awards</strong>
+                        <ol>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="slideshow-container col-md-8">
+                       
+                        <div class="mySlides ">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="../images/3.jpg" style="width:100%">
+                            <div class="text">
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="../images/7.jpg" style="width:100%">
+                            <div class="text">
+                             <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="../images/9.jpg" style="width:100%">
+                            <div class="text"> 
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p></div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div><br>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    
+                </div>
+                <br>
+            </div>
+        </div>
+        <div id="myModal6" class="modal">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <center><h1>ABOUT THE ARTIST <span class="close">&times;</span></h1> </center>
+                  
+                </div>
+                <div class="modal-body row">
+                    <div class =" profile-content col-md-4">
+                            <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        <br>
+                        <strong>Awards</strong>
+                        <ol>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="slideshow-container col-md-8">
+                       
+                        <div class="mySlides ">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="../images/2.jpg" style="width:100%">
+                            <div class="text">
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="../images/9.jpg" style="width:100%">
+                            <div class="text">
+                             <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="../images/6.jpg" style="width:100%">
+                            <div class="text"> 
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p></div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div><br>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    
+                </div>
+                <br>
+            </div>
+        </div>
+        <div id="myModal7" class="modal">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <center><h1>ABOUT THE ARTIST <span class="close">&times;</span></h1> </center>
+                  
+                </div>
+                <div class="modal-body row">
+                    <div class =" profile-content col-md-4">
+                            <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        <br>
+                        <strong>Awards</strong>
+                        <ol>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="slideshow-container col-md-8">
+                       
+                        <div class="mySlides ">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="../images/4.jpg" style="width:100%">
+                            <div class="text">
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="../images/6.jpg" style="width:100%">
+                            <div class="text">
+                             <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="../images/8.jpg" style="width:100%">
+                            <div class="text"> 
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p></div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div><br>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    
+                </div>
+                <br>
+            </div>
+        </div>
+        <div id="myModal8" class="modal">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <center><h1>ABOUT THE ARTIST <span class="close">&times;</span></h1> </center>
+                  
+                </div>
+                <div class="modal-body row">
+                    <div class =" profile-content col-md-4">
+                            <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        <br>
+                        <strong>Awards</strong>
+                        <ol>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="slideshow-container col-md-8">
+                       
+                        <div class="mySlides ">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="../images/6.jpg" style="width:100%">
+                            <div class="text">
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="../images/7.jpg" style="width:100%">
+                            <div class="text">
+                             <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="../images/9.jpg" style="width:100%">
+                            <div class="text"> 
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p></div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div><br>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    
+                </div>
+                <br>
+            </div>
+        </div>
+        <div id="myModal9" class="modal">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <center><h1>ABOUT THE ARTIST <span class="close">&times;</span></h1> </center>
+                  
+                </div>
+                <div class="modal-body row">
+                    <div class =" profile-content col-md-4">
+                            <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        <br>
+                        <strong>Awards</strong>
+                        <ol>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                            <li>ABC AWARDS</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="slideshow-container col-md-8">
+                       
+                        <div class="mySlides ">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="../images/3.jpg" style="width:100%">
+                            <div class="text">
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="../iimages/2.jpg" style="width:100%">
+                            <div class="text">
+                             <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p>
+                            </div>
+                        </div>
+                        <div class="mySlides ">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="../images/1.jpg" style="width:100%">
+                            <div class="text"> 
+                                <h2><i>'Les Demoiselles d'Avignon'</i></h2>
+                                <p>Date: 15/08/2017</p></div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div><br>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    
+                </div>
+                <br>
+            </div>
+        </div><br><br>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            var slideIndex = 1;
+            var modalIndex = 1;
+            
+            var modal1 = $('#myModal1');
+            var modal2 = $('#myModal2');
+            var modal3 = $('#myModal3');
+            var modal4 = $('#myModal4');
+            var modal5 = $('#myModal5');
+            var modal6 = $('#myModal6');
+            var modal7 = $('#myModal7');
+            var modal8 = $('#myModal8');
+            var modal9 = $('#myModal9');
+
+            var btn1 = $("#mybtn1");
+            var btn2 = $("#mybtn2");
+            var btn3 = $("#mybtn3");
+            var btn4 = $("#mybtn4");
+            var btn5 = $("#mybtn5");
+            var btn6 = $("#mybtn6");
+            var btn7 = $("#mybtn7");
+            var btn8 = $("#mybtn8");
+            var btn9 = $("#mybtn9");
+
+            var span = document.getElementsByClassName('close');
+
+            btn1.click(function() {
+                modal1.show();
+                slideIndex=1;
+                modalIndex=1;
+                showSlides(slideIndex);
+            });
+            btn2.click(function() {
+                modal2.show();
+                slideIndex=1;
+                modalIndex=2;
+                showSlides(slideIndex);
+            });  
+            btn3.click(function() {
+                modal3.show();
+                slideIndex=1;
+                modalIndex=3;
+                showSlides(slideIndex);
+            });
+            btn4.click(function() {
+                modal4.show();
+                slideIndex=1;
+                modalIndex=4;
+                showSlides(slideIndex);
+            });
+            btn5.click(function() {
+                modal5.show();
+                slideIndex=1;
+                modalIndex=5;
+                showSlides(slideIndex);
+            });  
+            btn6.click(function() {
+                modal6.show();
+                slideIndex=1;
+                modalIndex=6;
+                showSlides(slideIndex);
+            });
+            btn7.click(function() {
+                modal7.show();
+                slideIndex=1;
+                modalIndex=7;
+                showSlides(slideIndex);
+            });
+            btn8.click(function() {
+                modal8.show();
+                slideIndex=1;
+                modalIndex=8;
+                showSlides(slideIndex);
+            });
+            btn9.click(function() {
+                modal9.show();
+                slideIndex=1;
+                modalIndex=9;
+                showSlides(slideIndex);
+            });
+
+            span[0].onclick = function(){
+                modal1.hide();
+            }
+            span[1].onclick = function(){
+                modal2.hide();
+            }
+            span[2].onclick = function(){
+                modal3.hide();
+            }
+            span[3].onclick = function(){
+                modal4.hide();
+            }
+            span[4].onclick = function(){
+                modal5.hide();
+            }
+            span[5].onclick = function(){
+                modal6.hide();
+            }
+            span[6].onclick = function(){
+                modal7.hide();
+            }
+            span[7].onclick = function(){
+                modal8.hide();
+            }
+            span[8].onclick = function(){
+                modal9.hide();
+            }            
+            
+
+            function plusSlides(n) {
+              slideIndex=slideIndex+n;
+              showSlides(slideIndex);
+            }
+
+            function currentSlide(n) {
+              slideIndex=n;    
+              showSlides(slideIndex);
+            }
+
+            function showSlides(n) {
+              var i;
+              var modal = document.getElementById("myModal"+modalIndex);
+              var slides = modal.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace("active", "");
+              }
+              slides[slideIndex-1].style.display = "block"; 
+              dots[slideIndex-1].className += " active";
+            }
+            
+            
+        </script>
+        <script type="text/javascript">
+            var flag=0;
+            $("#menu").click(function(){
+                if(flag==0)
+                    {
+                        $("#overlay").fadeIn(1000);
+                        flag=1;
+                    }
+                });
+            $("#cancel").click(function(){
+                if(flag==1)
+                    {
+                        $("#overlay").fadeOut(1000);
+                        flag=0;
+                    }
+            });
+            
+        </script>
+        
+        <script>
+          window.onscroll = function() {
+    if ($(this).scrollTop() > 1) {
+      $('header').addClass("resize");
+    } else {
+      $('header').removeClass("resize");
+    }
+  };
+        </script>
+
+    </body>
+</html>

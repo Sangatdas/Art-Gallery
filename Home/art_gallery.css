@@ -1,0 +1,380 @@
+body{
+    background-color: #222222;
+    color: ghostwhite;
+    font-family: JungleBonesNormal;
+    font-weight: normal; 
+    font-style: normal;
+}
+.header{
+    font-size: 500%;
+    text-align: center;
+    animation: textAnimation 36s infinite;
+}
+center p{
+    text-align: center;
+    width: 50%;
+    letter-spacing: 2px;
+    line-height: 30px;
+    font-size: 125%;
+    animation: textAnimation 36s infinite;
+}
+.main{
+    padding: 50px;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+#menu{
+    position: fixed;
+    float: right;
+    left: 50px;
+    top: 50px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 200%;
+    z-index: 100;
+    cursor: pointer;
+    border-radius: 50%;
+    animation: textAnimation 36s infinite;
+    transition: all 0.5s ease-out;
+}
+#menu:hover{
+    cursor: pointer;
+    background-color: #444444;
+    transition: all 0.5s ease-out;
+}
+#overlay{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: -0.1px;
+    background-color: black;
+    opacity: 1;
+    z-index: 50;
+}
+nav ul {
+  min-width: 600px;
+  position: relative;
+  display: table;
+  margin: 200px auto;
+  clear: both;
+  text-align: center;
+}
+
+nav ul li {
+  list-style: none;
+  float: left;
+}
+nav ul li .text{
+    display: none;
+    transition: all 0.5s ease-out;
+}
+nav ul li:hover .text{
+    display: inline;
+    animation: inlineText 1s 1;
+    transition: all 0.5s ease-out;
+}
+@keyframes inlineText{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+nav ul li a {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 0 40px;
+  -webkit-perspective: 400px;
+     -moz-perspective: 400px;
+      -ms-perspective: 400px;
+          perspective: 400px;
+}
+
+nav ul li .front {
+  text-align: center;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+     -moz-transform: rotateX(0deg) rotateY(0deg);
+      -ms-transform: rotateX(0deg) rotateY(0deg);
+       -o-transform: rotateX(0deg) rotateY(0deg);
+  -webkit-transition: all 0.5s ease-in-out;
+     -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+       -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+       -o-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+       -o-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+nav ul li:hover .front {
+  -webkit-transform: rotateX(0deg) rotateY(180deg);
+     -moz-transform: rotateX(0deg) rotateY(180deg);
+      -ms-transform: rotateX(0deg) rotateY(180deg);
+       -o-transform: rotateX(0deg) rotateY(180deg);
+}
+
+nav ul li .back {
+  position: absolute;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  z-index: -1;
+  -webkit-transform: rotateX(0deg) rotateY(-180deg);
+     -moz-transform: rotateX(0deg) rotateY(-180deg);
+      -ms-transform: rotateX(0deg) rotateY(-180deg);
+       -o-transform: rotateX(0deg) rotateY(-180deg);
+  -webkit-transition: all 0.5s ease-in-out;
+     -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+       -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+       -o-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+       -o-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+nav ul li:hover .back {
+  z-index: 1;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+     -moz-transform: rotateX(0deg) rotateY(0deg);
+      -ms-transform: rotateX(0deg) rotateY(0deg);
+       -o-transform: rotateX(0deg) rotateY(0deg);
+}
+
+nav ul li i {
+  line-height: 100px !important;
+  color: white;
+  vertical-align: middle !important;
+}
+
+nav ul li span {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 100px;
+  color: white;
+  text-transform: lowercase;
+  vertical-align: middle;
+}
+
+nav ul li.color-1 .front,
+nav ul li.color-1 .back {
+  background-color: #e6567a;
+}
+
+nav ul li.color-2 .front,
+nav ul li.color-2 .back {
+  background-color: #00c0e4;
+}
+
+nav ul li.color-3 .front,
+nav ul li.color-3 .back {
+  background-color: #5bd999;
+}
+
+nav ul li.color-4 .front,
+nav ul li.color-4 .back {
+  background-color: #7658f4;
+}
+
+nav ul li.color-5 .front,
+nav ul li.color-5 .back {
+  background-color: #eac14d;
+}
+#cancel{
+    position: fixed;
+    float: right;
+    left: 50px;
+    top: 50px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 200%;
+    z-index: 100;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.5s ease-out;
+}
+#cancel:hover{
+    cursor: pointer;
+    background-color: #444444;
+    transition: all 0.5s ease-out;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+}
+
+/* Modal Content */
+.modal-content {
+    border-radius: 10px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+    
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+.close {
+    color: black;
+    float: right;
+    padding-right: 20px;
+    padding-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: coral;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #222222;
+    color: white;
+    opacity: 0.8;
+}
+
+.modal-body{
+    padding:20px;;
+    margin-left: 30%;
+}
+
+
+
+
+.container1 {
+	max-width:400px;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+    padding-bottom: 20px;
+}
+    #contact input[type="text"], #contact input[type="email"] #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact h3 {
+	color: #F96;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+#contact input[type="text"], #contact input[type="email"]{
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+#contact input[type="text"]:hover, #contact input[type="email"]:hover{
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
+}
+
+
+          
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:#0CF;
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+	background:#09C;
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+          
+#contact input:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}

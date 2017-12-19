@@ -1,0 +1,270 @@
+<html>
+    <head>
+        <title>Art Gallery</title>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" type="text/css" href="dist/MyFontsWebfontsKit.css">
+        <link rel="stylesheet" type="text/css" href="Home/style.css">
+        <link rel="stylesheet" type="text/css" href="Home/art_gallery.css">
+        
+        <style>
+            .subs{
+                position:absolute;
+                left: 90%;
+                float:right;
+                top:50px;
+                cursor: pointer;
+                font-size: 25px;
+            }
+            
+            .subs:hover{
+                cursor: pointer;
+                background-color: #666666;
+                transition: all 0.5s ease-out;
+                
+            }
+            
+            .sidenav {
+    height: 80%;
+    width: 0;
+    position: fixed;
+    z-index: 10000;
+    top: 15%;
+    left: 0;
+    bottom: 20%;
+    background-color: #111;
+    
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.6s;
+}
+
+
+            .sidenav li{
+                 padding: 5px;;
+    text-decoration: none;
+    font-size: 20px;
+                letter-spacing: 1px;
+                
+            } 
+       
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+            #news{
+                width: 2%;
+                
+               
+                height: 20%;
+                left: -50px;
+                
+            }
+            #news i {
+                position: relative;
+    border: solid white;;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+           
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="menu"><i class="fa fa-bars"></i></div>
+        </header>
+        <div id="overlay">
+            <header>
+                <div id="cancel"><i class="fa fa-times"></i></div>
+            </header>
+            <center>
+                <nav>
+                    <ul class="panel">
+                        <li class="color-1"> <a href="index.html">
+                                <div class="front">
+                                    <i class="fa fa-home fa-4x"></i>
+                                </div>
+                                <div class="back">
+                                    <span>home</span>
+                                </div>
+                            </a><br>
+                            <span class="text"><em>Place to be</em></span>
+                        </li>
+                        <li class="color-2"> <a href="Gallery/index.html">
+                                <div class="front">
+                                    <i class="fa fa-university fa-4x"></i>
+                                </div>
+                                <div class="back">
+                                    <span>galleries</span>
+                                </div>
+                            </a><br>
+                            <span class="text"><em>Only the best</em></span>
+                        </li>
+                        <li class="color-3"> <a href="Artists/index.html">
+                                <div class="front">
+                                    <i class="fa fa-users fa-4x"></i>
+                                </div>
+                                <div class="back">
+                                    <span>artists</span>
+                                </div>
+                            </a><br>
+                            <span class="text"><em>Legends</em></span>
+                        </li>
+                    </ul>
+                </nav>
+            </center>
+        </div>
+        <ul class="cb-slideshow">
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+        </ul>
+        
+        
+       <span onclick="closeNav()"> 
+           <div id="mySidenav" class="sidenav" class="Updates">
+            <center><h2>Upcoming Events</h2></center>
+  <ol type="1">
+      <li>1.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+      <li>2.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+      <li>3.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+      <li>4.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+ </ol>
+</div>
+      
+        </span>
+        <div class="main">
+            <div class="header">Magnifiques Animaux</div>
+            
+            <center>
+                <p style="text-align:center; width:50%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </center>
+        </div>
+        
+        
+        <span style="font-size:30px;cursor:pointer" >
+        <div id="news">
+           <span onclick="openNav()"> <i class="arrow right" ></i></span>
+            </div>
+        </span>
+        
+        <div id="myBtn" class="subs">Subscribe </div>
+        
+      <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+     <div class="container1">
+  
+  <form id="contact" action="http://bamboozled-in.stackstaging.com/PHP/insert.php" method="post" onSubmit="alert('Thank you');">
+    <h3>Your Details</h3>
+   
+    <fieldset>
+      <input placeholder="First Name" type="text" name="fname" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Last Name" type="text" name="lname" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Email Id" type="email" name="email" required>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" onclick="myFunction()">Submit</button>
+    </fieldset>
+  </form>
+ 
+  </div>
+  </div>
+        </div>
+ 
+  <!-- Modal content -->
+            
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+            var flag=0;
+            $("#menu").click(function(){
+                if(flag==0)
+                    {
+                        $("#overlay").fadeIn(1000);
+                        flag=1;
+                    }
+                });
+            $("#cancel").click(function(){
+                if(flag==1)
+                    {
+                        $("#overlay").fadeOut(1000);
+                        flag=0;
+                    }
+            });
+            
+        </script>
+        
+        <script>
+                var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+            document.getElementById("contact").reset();
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        
+        function myFunction() {
+            document.getElementById("contact").submit();
+    
+}
+            
+         </script>
+        
+        
+        <script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+    </body>
+</html>
